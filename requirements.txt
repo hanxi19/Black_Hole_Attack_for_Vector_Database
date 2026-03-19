@@ -1,0 +1,8 @@
+# Demo 依赖：数据加载、知识库构建、模型加载、黑洞攻击
+beir
+transformers
+torch
+sentence-transformers
+scikit-learn
+faiss-cpu
+tqdm
