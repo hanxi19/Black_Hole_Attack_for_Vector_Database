@@ -1,6 +1,6 @@
 # Black-Hole Attack on Vector Database Retrieval
 
-This repository contains the implementation accompanying the paper *Can You Trust the Vectors in Your Vector Database? Black-Hole Attack from Embedding Space Defects*. The code runs an end-to-end text-retrieval pipeline: knowledge-base construction from BEIR, dense embedding, data-aware poisoning (malicious vector injection), and evaluation of retrieval quality and approximate nearest neighbor (ANN) index behavior under attack.
+This repository contains the implementation accompanying the paper *Can You Trust the Vectors in Your Vector Database? Black-Hole Attack from Embedding Space Defects*. The code runs an end-to-end text-retrieval pipeline: knowledge-base construction, dense embedding, malicious vector injection, and evaluation of retrieval quality and approximate nearest neighbor (ANN) index behavior under attack.
 
 ## Repository layout
 
