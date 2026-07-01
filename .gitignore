@@ -1,0 +1,18 @@
+# Data (downloaded datasets, vectors, indexes, models)
+data/
+experiments/
+RAG/
+
+# Python cache
+**/__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+
+# Conda/pip
+*.egg-info/
+
+# other
+.claude

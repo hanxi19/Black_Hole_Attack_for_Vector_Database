@@ -1,0 +1,346 @@
+{
+  "model_settings": {
+    "embedding_models": [
+      {
+        "key": "contriever",
+        "name": "Contriever",
+        "huggingface_id": "facebook/contriever",
+        "description": "A strong dense retriever trained with contrastive learning"
+      },
+      {
+        "key": "bge",
+        "name": "BGE-base-en-v1.5",
+        "huggingface_id": "BAAI/bge-base-en-v1.5",
+        "description": "BAAI's general purpose embedding model"
+      },
+      {
+        "key": "gte",
+        "name": "GTE-base-en-v1.5",
+        "huggingface_id": "Alibaba-NLP/gte-base-en-v1.5",
+        "description": "An English text embedding model based on the Generalized Text Embedding architecture"
+      },
+      {
+        "key": "sift",
+        "name": "SIFT (handcrafted)",
+        "huggingface_id": "sift/handcrafted",
+        "description": "SIFT 128-dim handcrafted descriptors"
+      },
+      {
+        "key": "spacev",
+        "name": "Microsoft SpaceV",
+        "huggingface_id": "microsoft/spacev",
+        "description": "Bing search neural embeddings, 100-dim int8"
+      },
+      {
+        "key": "deep",
+        "name": "DEEP CNN",
+        "huggingface_id": "deep/cnn",
+        "description": "CNN image features, 96-dim"
+      }
+    ]
+  },
+  "dataset_settings": {
+    "description": "BEIR (Benchmarking IR) — a heterogeneous benchmark for zero-shot evaluation of information retrieval models across 9 diverse IR domains.",
+    "BEIR_datasets": [
+      {
+        "key": "msmarco",
+        "name": "MSMARCO",
+        "huggingface_id": "BeIR/msmarco",
+        "task": "Passage Retrieval",
+        "splits": [
+          "train",
+          "dev",
+          "test"
+        ],
+        "num_queries": 6980,
+        "corpus_size": "8.84M",
+        "used_in_paper": true
+      },
+      {
+        "key": "nq",
+        "name": "Natural Questions (NQ)",
+        "huggingface_id": "BeIR/nq",
+        "task": "Question Answering",
+        "splits": [
+          "train",
+          "test"
+        ],
+        "num_queries": 3452,
+        "corpus_size": "2.68M",
+        "used_in_paper": true
+      },
+      {
+        "key": "hotpotqa",
+        "name": "HotpotQA",
+        "huggingface_id": "BeIR/hotpotqa",
+        "task": "Question Answering",
+        "splits": [
+          "train",
+          "dev",
+          "test"
+        ],
+        "num_queries": 7405,
+        "corpus_size": "5.23M",
+        "used_in_paper": true
+      },
+      {
+        "key": "trec-covid",
+        "name": "TREC-COVID",
+        "huggingface_id": "BeIR/trec-covid",
+        "task": "Bio-Medical IR",
+        "splits": [
+          "test"
+        ],
+        "num_queries": 50,
+        "corpus_size": "171K",
+        "used_in_paper": false
+      },
+      {
+        "key": "nfcorpus",
+        "name": "NFCorpus",
+        "huggingface_id": "BeIR/nfcorpus",
+        "task": "Bio-Medical IR",
+        "splits": [
+          "train",
+          "dev",
+          "test"
+        ],
+        "num_queries": 323,
+        "corpus_size": "3.6K",
+        "used_in_paper": false
+      },
+      {
+        "key": "fiqa",
+        "name": "FiQA-2018",
+        "huggingface_id": "BeIR/fiqa",
+        "task": "Question Answering",
+        "splits": [
+          "train",
+          "dev",
+          "test"
+        ],
+        "num_queries": 648,
+        "corpus_size": "57K",
+        "used_in_paper": false
+      },
+      {
+        "key": "arguana",
+        "name": "ArguAna",
+        "huggingface_id": "BeIR/arguana",
+        "task": "Argument Retrieval",
+        "splits": [
+          "test"
+        ],
+        "num_queries": 1406,
+        "corpus_size": "8.67K",
+        "used_in_paper": false
+      },
+      {
+        "key": "touche2020",
+        "name": "Touche-2020",
+        "huggingface_id": "BeIR/webis-touche2020",
+        "task": "Argument Retrieval",
+        "splits": [
+          "test"
+        ],
+        "num_queries": 49,
+        "corpus_size": "382K",
+        "used_in_paper": false
+      },
+      {
+        "key": "cqadupstack",
+        "name": "CQADupStack",
+        "huggingface_id": "BeIR/cqadupstack",
+        "task": "Duplicate Question Retrieval",
+        "splits": [
+          "test"
+        ],
+        "num_queries": 13145,
+        "corpus_size": "457K",
+        "used_in_paper": false
+      },
+      {
+        "key": "quora",
+        "name": "Quora",
+        "huggingface_id": "BeIR/quora",
+        "task": "Duplicate Question Retrieval",
+        "splits": [
+          "dev",
+          "test"
+        ],
+        "num_queries": 10000,
+        "corpus_size": "523K",
+        "used_in_paper": false
+      },
+      {
+        "key": "dbpedia",
+        "name": "DBPedia Entity",
+        "huggingface_id": "BeIR/dbpedia-entity",
+        "task": "Entity Retrieval",
+        "splits": [
+          "dev",
+          "test"
+        ],
+        "num_queries": 400,
+        "corpus_size": "4.63M",
+        "used_in_paper": false
+      },
+      {
+        "key": "scidocs",
+        "name": "SCIDOCS",
+        "huggingface_id": "BeIR/scidocs",
+        "task": "Citation Prediction",
+        "splits": [
+          "test"
+        ],
+        "num_queries": 1000,
+        "corpus_size": "25K",
+        "used_in_paper": false
+      },
+      {
+        "key": "fever",
+        "name": "FEVER",
+        "huggingface_id": "BeIR/fever",
+        "task": "Fact Checking",
+        "splits": [
+          "train",
+          "dev",
+          "test"
+        ],
+        "num_queries": 6666,
+        "corpus_size": "5.42M",
+        "used_in_paper": false
+      },
+      {
+        "key": "climate-fever",
+        "name": "Climate-FEVER",
+        "huggingface_id": "BeIR/climate-fever",
+        "task": "Fact Checking",
+        "splits": [
+          "test"
+        ],
+        "num_queries": 1535,
+        "corpus_size": "5.42M",
+        "used_in_paper": false
+      },
+      {
+        "key": "scifact",
+        "name": "SciFact",
+        "huggingface_id": "BeIR/scifact",
+        "task": "Fact Checking",
+        "splits": [
+          "train",
+          "test"
+        ],
+        "num_queries": 300,
+        "corpus_size": "5K",
+        "used_in_paper": false
+      },
+      {
+        "key": "bioasq",
+        "name": "BioASQ",
+        "huggingface_id": "BeIR/bioasq",
+        "task": "Bio-Medical IR",
+        "splits": [
+          "train",
+          "test"
+        ],
+        "num_queries": 500,
+        "corpus_size": "14.91M",
+        "used_in_paper": false,
+        "public": false
+      },
+      {
+        "key": "signal1m",
+        "name": "Signal-1M (RT)",
+        "huggingface_id": "BeIR/signal1m",
+        "task": "Tweet Retrieval",
+        "splits": [
+          "test"
+        ],
+        "num_queries": 97,
+        "corpus_size": "2.86M",
+        "used_in_paper": false,
+        "public": false
+      },
+      {
+        "key": "trec-news",
+        "name": "TREC-NEWS",
+        "huggingface_id": "BeIR/trec-news",
+        "task": "News Retrieval",
+        "splits": [
+          "test"
+        ],
+        "num_queries": 57,
+        "corpus_size": "595K",
+        "used_in_paper": false,
+        "public": false
+      },
+      {
+        "key": "robust04",
+        "name": "Robust04",
+        "huggingface_id": "BeIR/robust04",
+        "task": "News Retrieval",
+        "splits": [
+          "test"
+        ],
+        "num_queries": 249,
+        "corpus_size": "528K",
+        "used_in_paper": false,
+        "public": false
+      },
+      {
+        "key": "msmarco-v2",
+        "name": "MSMARCO v2 (Cohere)",
+        "huggingface_id": "Cohere/msmarco-v2.1-embed-english-v3",
+        "task": "Passage Retrieval",
+        "splits": [
+          "test"
+        ],
+        "num_queries": 1677,
+        "corpus_size": "113.5M",
+        "used_in_paper": false,
+        "public": true
+      },
+      {
+        "key": "sift1m",
+        "name": "SIFT1M",
+        "huggingface_id": "INRIA/sift1m",
+        "task": "Nearest Neighbor Search",
+        "splits": [
+          "test"
+        ],
+        "num_queries": 10000,
+        "corpus_size": "1M",
+        "used_in_paper": false,
+        "public": true
+      },
+      {
+        "key": "spacev1m",
+        "name": "SpaceV-1M",
+        "huggingface_id": "microsoft/spacev1m",
+        "task": "Semantic Search",
+        "splits": [
+          "test"
+        ],
+        "num_queries": 29316,
+        "corpus_size": "1M",
+        "used_in_paper": false,
+        "public": true
+      },
+      {
+        "key": "deep1m",
+        "name": "DEEP-1M",
+        "huggingface_id": "deep/1m",
+        "task": "Image NN Search",
+        "splits": [
+          "test"
+        ],
+        "num_queries": 30000,
+        "corpus_size": "1M",
+        "used_in_paper": false,
+        "public": true
+      }
+    ]
+  }
+}
